@@ -31,4 +31,6 @@
 **/tmp/
 
 # Environment file
-.env
+*.env
+
+/vars
