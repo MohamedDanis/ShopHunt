@@ -6,6 +6,7 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 
+
 const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
   const mapRef = useRef<google.maps.Map | null>(null);
   const [position, setPosition] = useState<null | { lat: number; lng: number }>(
@@ -17,7 +18,7 @@ const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
     lng: number;
   }>({ lat: 11.048103285269043, lng: 76.07736110687256 });
   const [btnClicked, setBtnClicked] = useState(false);
-  const [selectedShop, setSelectedShop] = useState<any[]>([]);
+  const [selectedShop, setSelectedShop] = useState<any | null>(null);
   const handleMarkerClick = (shop: any) => {
     setSelectedShop(shop);
     setInfoWindow(true);
