@@ -1,0 +1,60 @@
+[
+    {
+      "name": "Shop1",
+      "type": "Retail",
+      "email": "shop1@example.com",
+      "password": "password123",
+      "shopName": "ABC Mart",
+      "shopLocation": {"latitude": 40.7128, "longitude": -74.0060},
+      "products": [
+        {"productName": "Widget A", "quantity": 50, "price": 10.99},
+        {"productName": "Gadget B", "quantity": 20, "price": 29.99}
+      ]
+    },
+    {
+      "name": "Shop2",
+      "type": "Grocery",
+      "email": "shop2@example.com",
+      "password": "securepass",
+      "shopName": "Fresh Mart",
+      "shopLocation": {"latitude": 34.0522, "longitude": -118.2437},
+      "products": [
+        {"productName": "Widget A", "quantity": 100, "price": 1.99},
+        {"productName": "Canned Goods", "quantity": 50, "price": 2.99}
+      ]
+    },
+    {
+      "name": "Shop3",
+      "type": "Electronics",
+      "email": "shop3@example.com",
+      "password": "mypassword",
+      "shopName": "Tech Haven",
+      "shopLocation": {"latitude": 37.7749, "longitude": -122.4194},
+      "products": [
+        {"productName": "Smartphone", "quantity": 30, "price": 499.99}
+      ]
+    },
+    {
+      "name": "Shop4",
+      "type": "Fashion",
+      "email": "shop4@example.com",
+      "password": "fashionpass",
+      "shopName": "Chic Boutique",
+      "shopLocation": {"latitude": 41.8781, "longitude": -87.6298},
+      "products": []
+    },
+    {
+      "name": "Shop5",
+      "type": "Restaurant",
+      "email": "shop5@example.com",
+      "password": "foodiepass",
+      "shopName": "Tasty Treats",
+      "shopLocation": {"latitude": 51.5074, "longitude": -0.1278},
+      "products": [
+        {"productName": "Pizza", "quantity": 100, "price": 9.99},
+        {"productName": "Burger", "quantity": 50, "price": 5.99}
+      ]
+    }
+  ]
+  
+  

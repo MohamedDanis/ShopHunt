@@ -1,0 +1,29 @@
+# Build output
+**/.next/
+
+# Yarn files
+**/yarn.lock
+**/.yarn-cache/
+
+# Node.js distribution
+**/node_modules/
+
+# Editor files and backups
+**/.DS_Store
+**/.vscode/
+**/.idea/
+
+# Test coverage output
+**/coverage/
+
+# Build cache
+**/.build/
+
+# Next.js server PID file
+**/.pid
+
+# Generated documentation
+**/docs/
+
+# Temporary files
+**/tmp/
