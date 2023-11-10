@@ -6,9 +6,9 @@ const ProductList = ({ products, onDataFromChild1 }: any) => {
   };
   return (
     <>
-      {products.map((product: any) => {
+      {products.map((product: any,index:any) => {
         return (
-          <div className="w-full rounded-2xl bg-blue-200 text-slate-900 p-6 transition-all mt-1 mb-3">
+          <div key={index} className="w-full rounded-2xl bg-blue-200 text-slate-900 p-6 transition-all mt-1 mb-3">
             <h1 className="font-medium">{`Shop Name : ${product?.shopName} `}</h1>
             <h2>
               Distance From your Location :
