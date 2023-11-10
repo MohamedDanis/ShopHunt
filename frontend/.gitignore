@@ -31,4 +31,4 @@
 **/tmp/
 
 # Environment file
-**/.env
+.env
