@@ -11,13 +11,13 @@ const cors = require('cors');
 
 
 const corsOptions ={
-  origin:'http://localhost:3000', 
+  origin:['http://localhost:3000','https://shop-hunt.vercel.app/'], 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-mongoose.connect('mongodb://localhost:27017/BookFarm?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost:27017/Shophunt?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
