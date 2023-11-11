@@ -11,7 +11,7 @@ const cors = require('cors');
 
 
 const corsOptions ={
-  origin:'https://shop-hunt.vercel.app/', 
+  origin:'https://shop-hunt.vercel.app', 
   credentials:true,            //access-control-allow-credentials:true
   // optionSuccessStatus:200,
   allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization',
@@ -20,6 +20,13 @@ const corsOptions ={
 }
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
+
+// Add the following middleware to set the Access-Control-Allow-Origin header
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://shop-hunt.vercel.app');
+  next();
+});
+
 mongoose.connect('mongodb://localhost:27017/Shophunt?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
