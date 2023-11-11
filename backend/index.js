@@ -13,7 +13,9 @@ const cors = require('cors');
 const corsOptions ={
   origin:['http://localhost:3000','https://shop-hunt.vercel.app/'], 
   credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
+  optionSuccessStatus:200,
+  allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
