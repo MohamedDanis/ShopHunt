@@ -31,7 +31,6 @@ const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
   };
   useEffect(() => {
     if (flagChild1) {
-      console.log(flagChild1);
       handleMove(flagChild1?.shopLocation);
     }
     navigator.geolocation.getCurrentPosition(
@@ -52,7 +51,7 @@ const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
   };
   const MAP = process.env.NEXT_PUBLIC_MAP_TOKEN
   return (
-    <LoadScript googleMapsApiKey={MAP || ''}>
+    <LoadScript googleMapsApiKey={MAP || 'AIzaSyBCdgVJgrilM8juB_Z2Dj6AFYMQxtGRREM'}>
       <GoogleMap
         mapContainerStyle={{ width: "100%", height: "100vh" }}
         center={{

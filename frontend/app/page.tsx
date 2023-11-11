@@ -37,7 +37,7 @@ export default function Home() {
   };
   const searchProduct = async () => {
     await axios
-      .get(`${process.env.NEXT_PUBLIC_SERVER_URL}/search/product`, {
+      .get(`http://192.46.209.76/search/product`, {
         params: {
           latitude: selectedLocation?.lat,
           longitude: selectedLocation?.lng,
