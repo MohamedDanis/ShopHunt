@@ -50,8 +50,9 @@ const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
   const handleMapLoad = (map: google.maps.Map) => {
     mapRef.current = map;
   };
+  const MAP = process.env.NEXT_PUBLIC_MAP_TOKEN
   return (
-    <LoadScript googleMapsApiKey={process.env.MAP_TOKEN || ""}>
+    <LoadScript googleMapsApiKey={MAP || ''}>
       <GoogleMap
         mapContainerStyle={{ width: "100%", height: "100vh" }}
         center={{
