@@ -8,9 +8,6 @@ const jwt = require('jsonwebtoken');
 const geolib = require('geolib')
 const shop = require('./data/shop.json')
 const cors = require('cors');
-
-
-const cors = require('cors');
 const corsOptions ={
   origin:'*', 
   credentials:true,       
