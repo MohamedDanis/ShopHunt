@@ -13,18 +13,12 @@ const cors = require('cors');
 const cors = require('cors');
 const corsOptions ={
   origin:'*', 
-  credentials:true,            //access-control-allow-credentials:true
+  credentials:true,       
   allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-
-// Add the following middleware to set the Access-Control-Allow-Origin header
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  next();
-});
 
 mongoose.connect('mongodb://localhost:27017/Shophunt?retryWrites=true&w=majority', {
   useNewUrlParser: true,
