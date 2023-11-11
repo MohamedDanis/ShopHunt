@@ -24,8 +24,8 @@ app.use(bodyParser.json());
 // Add the following middleware to set the Access-Control-Allow-Origin header
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://shop-hunt.vercel.app');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
