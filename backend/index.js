@@ -10,13 +10,13 @@ const shop = require('./data/shop.json')
 const cors = require('cors');
 
 
+const cors = require('cors');
 const corsOptions ={
-  origin:'https://shop-hunt.vercel.app', 
+  origin:'*', 
   credentials:true,            //access-control-allow-credentials:true
-  // optionSuccessStatus:200,
+
   allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  exposedHeaders: 'Access-Control-Allow-Origin' // add this line
 }
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
@@ -24,6 +24,9 @@ app.use(bodyParser.json());
 // Add the following middleware to set the Access-Control-Allow-Origin header
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://shop-hunt.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 });
 
