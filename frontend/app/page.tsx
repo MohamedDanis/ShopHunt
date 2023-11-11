@@ -37,7 +37,7 @@ export default function Home() {
   };
   const searchProduct = async () => {
     await axios
-      .get(`http://192.46.209.76/search/product`, {
+      .get(`https://mohameddanis.live/search/product`, {
         params: {
           latitude: selectedLocation?.lat,
           longitude: selectedLocation?.lng,
