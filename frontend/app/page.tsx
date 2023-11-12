@@ -37,7 +37,7 @@ export default function Home() {
   };
   const searchProduct = async () => {
     await axios
-      .get(`http://localhost:3000/api/search`, {
+      .get(`https://shop-hunt.vercel.app/api/search`, {
         params: {
           latitude: selectedLocation?.lat,
           longitude: selectedLocation?.lng,
