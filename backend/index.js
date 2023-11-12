@@ -79,7 +79,7 @@ try {
 });
 
 // Product search route
-app.get('/search/product', async (req, res) => {
+app.get('/search/product',cors(corsOptions), async (req, res) => {
   try {
     const userLocation = {
       latitude: req.query.latitude,
