@@ -37,7 +37,7 @@ export default function Home() {
   };
   const searchProduct = async () => {
     await axios
-      .get(`https://mohameddanis.live/search/product`, {
+      .get(`http://localhost:3000/api/search`, {
         params: {
           latitude: selectedLocation?.lat,
           longitude: selectedLocation?.lng,
@@ -45,9 +45,7 @@ export default function Home() {
         },
       })
       .then((res) => {
-        console.log(res.data.nearbyshops);
-
-        setProducts(res?.data?.nearbyshops);
+        setProducts(res?.data);
         console.log(products);
       })
       .catch((err) => {
