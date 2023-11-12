@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, use } from "react";
 import {
   GoogleMap,
   Marker,
   LoadScript,
   InfoWindow,
 } from "@react-google-maps/api";
+import usrloc from '@/public/userloc.png'
 
 
 const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
@@ -51,7 +52,7 @@ const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
   };
   const MAP = process.env.NEXT_PUBLIC_MAP_TOKEN
   return (
-    <LoadScript googleMapsApiKey={MAP || 'AIzaSyBCdgVJgrilM8juB_Z2Dj6AFYMQxtGRREM'}>
+    <LoadScript googleMapsApiKey={MAP||''}>
       <GoogleMap
         mapContainerStyle={{ width: "100%", height: "100vh" }}
         center={{
@@ -63,9 +64,9 @@ const MapComponent = ({ onLocationSelect, shopData, flagChild1 }: any) => {
       >
         {position && (
           <Marker
-            position={{ lat: 11.048103285269043, lng: 76.07736110687256 }}
+            position={{ lat: position.lat, lng: position.lng }}
             icon={{
-              url: "https://w7.pngwing.com/pngs/731/25/png-transparent-location-icon-computer-icons-google-map-maker-marker-pen-cartodb-map-marker-heart-logo-color-thumbnail.png",
+              url: usrloc.src || 'https://cdn3.iconfinder.com/data/icons/map-markers-1/512/supermarket-512.png',
               scaledSize: new window.google.maps.Size(40, 40),
             }}
           />

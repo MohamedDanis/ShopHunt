@@ -74,12 +74,16 @@ export default function Home() {
         flagChild1={flagFromChild1}
         shopData={products}
       />
-      <div className="absolute top-10 left-1/2">
-        <div className="flex items-center gap-4">
+      <div className="absolute top-0 py-4 md:px-28 px-4 flex justify-between  w-full bg-slate-300">
+        <div>
+          <h1 className="text-3xl font-bold text-teal-950">ShopHunt</h1>
+          <p className="text-sm text-teal-950">Find your nearest shop</p>
+        </div>
+        <div className="flex items-center justify-end gap-4">
           <input
             type="text"
             onChange={(e) => handleSearchQueryChange(e)}
-            className=" block h-9 w-full border border-black bg-white px-3 py-6  text-sm text-[#333333]"
+            className=" block h-9 md:w-full w-1/2 border border-black bg-white px-3 py-6  text-sm text-[#333333]"
             name="name"
             placeholder="Search for product"
           />
@@ -87,7 +91,7 @@ export default function Home() {
             href="#"
             className="flex max-w-full flex-row items-center justify-center bg-teal-700 h-9 px-4 py-6 text-center font-semibold text-white transition "
           >
-            <p className="mr-6 font-bold">Search</p>
+            <p className="mr-6 font-bold md:block hidden">Search</p>
             <div className="h-4 w-4 flex-none">
               <svg
                 fill="currentColor"
@@ -100,7 +104,11 @@ export default function Home() {
             </div>
           </Link>
         </div>
-        {products && (
+        
+       
+      </div>
+      <div className="absolute top-20 right-28">
+      {products && (
           <ProductList
             onDataFromChild1={handleButtonClick}
             products={products}
