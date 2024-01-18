@@ -35,9 +35,12 @@ export default function Home() {
     // setSelectedLocation({ lat, lng });
     // console.log(lat,lng);
   };
+ 
+  
   const searchProduct = async () => {
     await axios
       .get(`https://shop-hunt.vercel.app/api/search`, {
+      // .get(`http://localhost:3000/api/search`, {
         params: {
           latitude: selectedLocation?.lat,
           longitude: selectedLocation?.lng,
@@ -115,6 +118,11 @@ export default function Home() {
           />
         )}
       </div>
+      <div className="bg-slate-300 w-[4 00px] h-[100px] absolute bottom-0 text-teal-950 p-3">
+        Please search for below product to see the results :<br/>
+        <span className="font-medium">Pizza, Widget A, Gadget B, Pizza, Burger etc.</span>
+        
+      </div>
     </div>
-  );
+  ); 
 }
